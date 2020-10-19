@@ -1,0 +1,29 @@
+
+
+
+<header class="header">
+  <div
+    class="d-flex flex-column flex-md-row align-items-center  px-md-4  bg-secondary border-bottom shadow-sm " 
+  >
+    <h5 class="my-0  mr-md-auto font-weight-normal"> <img src="/images/logo.png" alt="" width="100" height="100"> </h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <% if(locals.user){ %>
+      <a class="p-2 text-dark" href="/user/profile/<%= user.id %>"><strong><%= user.name %></strong></a>
+      <a class="p-2 text-dark" href="/user/logout"
+        ><button type="submit" class="btn btn-danger">Sign Out</button></a
+      >
+
+      <a class="p-2 text-dark" href="/"
+        ><button type="submit" class="btn btn-primary">Home</button></a
+      >
+      <%}else{%>
+      <a class="p-2 text-dark" href="/user/sign-in"
+        ><button type="submit" class="btn btn-success">Sign In</button></a
+      >
+    </nav>
+    <a class="btn btn-primary" href="/user/sign-up">Sign up</a>
+  </div>
+
+  <% } %>
+</header>
+

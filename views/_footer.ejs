@@ -1,0 +1,18 @@
+<footer>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-secondary">
+        <a class="navbar-brand" href="#">@Praveen Kumar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <%if(locals.user){%>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/user/profile/<%= user.id %>">
+                            <%=user.name%> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <%}%>
+            </ul>
+        </div>
+    </nav>
+</footer>
