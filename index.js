@@ -12,6 +12,11 @@ const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 const passportJWT = require("./config/passport-jwt-strategy");
 const passportGoogle = require("./config/passport-google-oauth2-strategy");
+const nodeMailer = require("./config/nodemailer");
+const chatServer = require("http").Server(app);
+const chatSockets = require("./config/chat_sockets").chatSockets(chatServer);
+chatServer.listen(5000);
+console.log("chatServer is listening at port 5000");
 
 const flash = require("connect-flash");
 const customMiddleware = require("./config/middleware");
