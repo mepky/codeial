@@ -1,11 +1,11 @@
 # FB codeial
 
-## Clone it into your local system 
+## Clone it Into your Local System 
 
 ### npm install
 
-## Run it with 
+## Run it With 
 ### npm start
 
 
-### Project has deployed on https://codeial01.herokuapp.com/
+### Project has Deployed on https://codeial01.herokuapp.com/
