@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/home.css" />
+<!-- <link rel="stylesheet" href="/css/chat_box.css" /> -->
+
+<% if(locals.user){ %>
+    <section class="home-container">
+        <h1 style="color: aliceblue">Posts</h1>
+
+        <%- include('_post') -%>
+
+            <section class="friends">
+                <h2 style="color: whitesmoke">Friends</h2>
+                <% for(friends of all_user ){ %>
+                    <p>
+                        <a style="text-decoration: none; color: deepskyblue" href="/user/profile/<%= friends.id %>">
+                            <%= friends.name %>
+                        </a>
+                    </p>
+
+                    <%}%>
+            </section>
+
+            <%}else{%>
+
+                <div style="text-align: center; background-color: aquamarine; height: 100vh">
+                    <h1>Welcome To Codeial!!</h1>
+                    <h2>Please Sign in / Sign up To Continue</h2>
+                </div>
+
+                <%}%>
+    </section>

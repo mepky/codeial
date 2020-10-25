@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/css/home.css" />
+
+<form action="/post/create" method="POST">
+    <div class="mb-3">
+        <textarea  placeholder="Type Here...." name="content" required cols="50" rows="4"></textarea>
+        <button type="Submit" class="btn btn-primary button">Post</button>
+    </div>
+</form>
+
+
+        <ul class="post-list">
+            <% for (post of post){%>
+                <li class="whole-post">
+            <h2 class="box">
+                
+                    <% if(locals.user.id == post.user.id){ %>
+                    <small>
+                        <a href="/post/destroy/<%= post.id %>">X</a>
+                    </small>
+                    <%}%>
+                      <div>
+                        <%= post.content %>
+                      </div>  
+                    <strong style="color: black; font-size:medium;"> Posted By: <strong><%=post.user.name %> </strong> </strong>
+
+                    
+
+                    </h2>
+
+
+        
+
+
+<form action="/comment/create" method="POST">
+    <div class="comment-container">
+        <input type="text" class="form-control" name="content" placeholder="Enter Comment" required />
+        <input type="hidden" class="form-control" name="post" value="<%= post._id %>" />
+        <button type="submit" class="btn btn-primary">
+            Add Comment
+        </button>
+    </div>
+</form>
+
+<div>
+    <ul class="comments">
+        <% for(comment of post.comment){%>
+          <li>
+
+            <%- include('_comment') -%>
+          </li>
+      
+        <%}%>
+    </ul>
+  </div>
+  
+  <%}%>
+
+</li>
+
+</ul>
+  

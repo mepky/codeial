@@ -1,0 +1,18 @@
+.background{
+    height: 80vh;
+    background-color: black;
+}
+input.form-control{
+    text-align: center;
+}
+
+form{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 75px;
+}
+#form-heading{
+    text-align: center;
+    color: white;
+}

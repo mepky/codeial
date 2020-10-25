@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/images/logo.png" type="image/gif" sizes="16x16" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/chat_box.css" />
+
+    <link rel="stylesheet" href="/css/layout.css" />
+    <%-style %>
+</head>
+
+<body>
+    <%-include('_header');%>
+        <%- body %>
+            <%-include('_footer');%>
+                <%-include('chat_box');%>
+                    <%-script %>
+
+                        <script>
+                            <% if (flash.success && flash.success.length > 0) {  %>
+                            new Noty({
+                                theme: 'relax',
+                                type: 'success',
+                                layout: 'topRight',
+                                text: '<%= flash.success%>',
+                                timeout: 1500
+
+                            }).show();
+                            <%}%>
+
+
+                            <% if (flash.error && flash.error.length > 0) {  %>
+                            new Noty({
+                                theme: 'relax',
+                                type: 'error',
+                                layout: 'topRight',
+                                text: '<%= flash.error%>',
+                                timeout: 1500
+
+                            }).show();
+                            <%}%>
+                        </script>
+
+                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+                        <script src="/js/chat_engine.js"></script>
+                        <% if(locals.user){%>
+                            <script>
+                                newChatEngine("user-chat-box", "<%=locals.user.email%>");
+                            </script>
+                            <%}%>
+</body>
+
+</html>

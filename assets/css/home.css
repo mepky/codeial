@@ -1,0 +1,152 @@
+li{
+    list-style: none;
+}
+
+.box{
+      padding:20px;
+      /* font-size: large; */
+      /* font-weight: 800; */border:solid;
+      border-radius: 20px;
+
+
+
+}
+
+.form{
+    width: 30%;
+    margin-left: 40px;
+}
+
+h3{
+    margin-left: 40px;
+}
+
+.button{
+    margin-top: -20px;
+    margin-left: 10px
+}
+
+.align{
+    text-align: center;
+    color: dodgerblue;
+    margin: auto;
+}
+.mid{
+    padding-top: 100px;
+    height: 100vh;
+    background-color: aquamarine;
+
+}
+
+.comments{
+    width: 50%;
+    margin-left: 40px;
+
+  
+}
+
+
+div.box{
+    margin-left: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+  .mb-2, .my-2 {
+      margin: 0 !important;
+}
+
+.d-flex{
+  height: 10vh;
+}
+
+
+.whole-post{
+    background-color: darkgray;
+    color: floralwhite;
+    padding: 10px;
+    font-weight: bolder;
+    margin: 20px;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.whole-post a{
+    /* background-color: white; */
+    font-size: x-large;
+    color: red;
+    font-weight: 800;
+    float: right;
+
+}
+.comments li{
+   background-color: lightslategray;
+   border: black solid 2px;
+   padding: 5px 10px;
+   margin: 10px;
+   border-radius: 20px;
+}
+
+form{
+    width: 50%;
+}
+
+
+.post-list{
+    display: inline-block;
+    margin-bottom: 10vh;
+    width: 70vw;
+}
+.form-control{
+    display: inline;
+}
+
+.comment-container input{
+  width:50%;
+}
+
+a{
+    border-radius: 50%;
+
+}
+
+form{
+    margin-left: 40px;
+}
+
+.home-container{
+    display: inline-block;
+    
+}
+.friends{
+    display: inline-block;
+    float: right;
+    padding: 4vw;
+    width: 20vw;
+    border-left: 1px solid white;
+    height: 100vh;
+    border-top: 1px solid white;
+    margin: 5px;
+    border-bottom: 1px solid white;
+    border: 1px solid white;
+}
+
